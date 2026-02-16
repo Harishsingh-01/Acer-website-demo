@@ -1,0 +1,295 @@
+.home-page {
+    padding-top: 70px;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-image:
+        linear-gradient(135deg, rgba(102, 126, 234, 0.95) 0%, rgba(118, 75, 162, 0.95) 100%),
+        url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1600');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.3) 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-text {
+    max-width: 800px;
+    color: var(--white);
+    text-align: center;
+    margin: 0 auto;
+}
+
+.hero-text h1 {
+    color: var(--white);
+    margin-bottom: var(--space-md);
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 1.1;
+}
+
+.gradient-text {
+    background: linear-gradient(to right, #fbbf24, #f59e0b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-text p {
+    font-size: clamp(1.125rem, 2vw, 1.375rem);
+    margin-bottom: var(--space-xl);
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.6;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: var(--space-md);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-lg {
+    padding: var(--space-md) var(--space-xl);
+    font-size: 1.125rem;
+}
+
+/* Counters Section */
+.counters-section {
+    background: var(--white);
+    padding: var(--space-2xl) 0;
+    margin-top: calc(-1 * var(--space-2xl));
+    position: relative;
+    z-index: 3;
+}
+
+.counters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-xl);
+    background: var(--white);
+    padding: var(--space-xl);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xl);
+}
+
+/* Section CTA */
+.section-cta {
+    text-align: center;
+    margin-top: var(--space-xl);
+}
+
+.cta-section .btn {
+    margin-top: var(--space-md);
+}
+
+.courses-package-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: var(--space-3xl);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+@media (max-width: 968px) {
+    .courses-package-grid {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+    }
+}
+
+/* Gallery Section */
+.gallery-section {
+    background: var(--gray-50);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-md);
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    box-shadow: var(--shadow-base);
+    transition: all var(--transition-base);
+}
+
+.gallery-item:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Testimonials */
+.testimonials-section {
+    background: var(--white);
+}
+
+/* CTA Section */
+.cta-section {
+    background: var(--gradient-primary);
+    padding: var(--space-3xl) 0;
+    color: var(--white);
+}
+
+.cta-content {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.cta-content h2 {
+    color: var(--white);
+    margin-bottom: var(--space-md);
+}
+
+.cta-content p {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-xl);
+    opacity: 0.95;
+}
+
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    padding: var(--space-3xl) 0;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .home-page {
+        padding-top: 60px;
+    }
+
+    /* Remove container padding for full width on mobile */
+    .home-page .container {
+        padding-left: 0;
+        padding-right: 0;
+        max-width: 100%;
+    }
+
+    /* Hero Section - Full Width */
+    .hero-section {
+        min-height: 70vh;
+        background-attachment: scroll;
+    }
+
+    .hero-section .container {
+        padding-left: var(--space-md);
+        padding-right: var(--space-md);
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        gap: var(--space-sm);
+    }
+
+    .btn-lg {
+        width: 100%;
+        padding: var(--space-sm) var(--space-md);
+        font-size: 1rem;
+    }
+
+    /* Counters - Full Width */
+    .counters-section {
+        padding: var(--space-xl) var(--space-md);
+        margin-top: -40px;
+    }
+
+    .counters-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-sm);
+        padding: var(--space-md);
+    }
+
+    /* Featured Courses - Full Width */
+    .featured-courses .container {
+        padding: 0 var(--space-sm);
+    }
+
+    .courses-package-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+        padding: 0;
+    }
+
+    /* Reviews Section - Full Width */
+    .reviews-section .container {
+        padding-left: var(--space-md);
+        padding-right: var(--space-md);
+    }
+
+    /* CTA Section - Full Width */
+    .cta-section {
+        padding: var(--space-2xl) var(--space-md);
+    }
+
+    .cta-content h2 {
+        font-size: 1.75rem;
+    }
+
+    .cta-content p {
+        font-size: 1rem;
+    }
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 1.75rem;
+    }
+
+    .counters-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+
+    .section-title h2 {
+        font-size: 1.5rem;
+    }
+
+    .section-title p {
+        font-size: 0.95rem;
+    }
+}

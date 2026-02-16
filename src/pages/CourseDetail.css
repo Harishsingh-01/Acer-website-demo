@@ -1,0 +1,215 @@
+.course-detail-page {
+    padding-top: 70px;
+}
+
+.course-header {
+    position: relative;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.course-header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.95), rgba(118, 75, 162, 0.95));
+}
+
+.course-header-content {
+    position: relative;
+    z-index: 2;
+    color: var(--white);
+}
+
+.course-header h1 {
+    color: var(--white);
+    margin: var(--space-md) 0;
+}
+
+.course-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-lg);
+    opacity: 0.95;
+}
+
+.course-meta-header {
+    display: flex;
+    gap: var(--space-lg);
+    flex-wrap: wrap;
+}
+
+.course-meta-header .meta-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    background: rgba(255, 255, 255, 0.2);
+    padding: var(--space-xs) var(--space-md);
+    border-radius: var(--radius-full);
+    backdrop-filter: blur(10px);
+}
+
+.level-badge {
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.course-detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: var(--space-3xl);
+}
+
+.course-main-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+}
+
+.content-section h2 {
+    margin-bottom: var(--space-lg);
+}
+
+.content-section p {
+    line-height: 1.8;
+    color: var(--gray-700);
+}
+
+.features-list {
+    list-style: none;
+    display: grid;
+    gap: var(--space-md);
+}
+
+.features-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-sm);
+    padding: var(--space-md);
+    background: var(--gray-50);
+    border-radius: var(--radius-base);
+}
+
+.check-icon {
+    color: var(--success);
+    font-size: 1.25rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.features-list span {
+    color: var(--gray-700);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+}
+
+.benefit-card {
+    padding: var(--space-lg);
+    background: var(--primary-light);
+    border-radius: var(--radius-lg);
+}
+
+.benefit-card h4 {
+    color: var(--primary);
+    margin-bottom: var(--space-xs);
+}
+
+.benefit-card p {
+    font-size: 0.9375rem;
+    color: var(--gray-600);
+}
+
+.course-sidebar {
+    position: sticky;
+    top: 90px;
+    height: fit-content;
+}
+
+.pricing-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.price-tag {
+    text-align: center;
+    padding: var(--space-xl);
+    background: var(--gradient-primary);
+    border-radius: var(--radius-lg);
+    color: var(--white);
+}
+
+.price-label {
+    display: block;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: var(--space-xs);
+    opacity: 0.9;
+}
+
+.price-amount {
+    display: block;
+    font-size: 3rem;
+    font-weight: 800;
+    font-family: var(--font-display);
+}
+
+.btn-full {
+    width: 100%;
+    justify-content: center;
+}
+
+.course-includes h4 {
+    margin-bottom: var(--space-md);
+}
+
+.course-includes ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.course-includes li {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    color: var(--gray-700);
+}
+
+.course-includes .check-icon {
+    font-size: 1rem;
+}
+
+.loading-page,
+.error-page {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-lg);
+}
+
+@media (max-width: 968px) {
+    .course-detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .course-sidebar {
+        position: static;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+}

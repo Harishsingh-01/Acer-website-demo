@@ -1,0 +1,19 @@
+.google-map-container {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+.google-map-container iframe {
+    display: block;
+    width: 100%;
+}
+
+.map-link {
+    position: absolute;
+    bottom: var(--space-lg);
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: var(--shadow-lg);
+}

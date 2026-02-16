@@ -1,0 +1,108 @@
+.blog-detail-page {
+    padding-top: 70px;
+}
+
+.blog-detail-header {
+    position: relative;
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.blog-header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.92), rgba(118, 75, 162, 0.92));
+}
+
+.blog-header-content {
+    position: relative;
+    z-index: 2;
+    color: var(--white);
+    max-width: 800px;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    color: var(--white);
+    margin-bottom: var(--space-lg);
+    font-weight: 500;
+    transition: gap var(--transition-base);
+}
+
+.back-link:hover {
+    gap: var(--space-sm);
+}
+
+.blog-category-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: var(--space-xs) var(--space-md);
+    border-radius: var(--radius-full);
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: var(--space-md);
+}
+
+.blog-detail-header h1 {
+    color: var(--white);
+    margin-bottom: var(--space-md);
+}
+
+.blog-header-meta {
+    display: flex;
+    gap: var(--space-xl);
+    font-size: 1rem;
+}
+
+.blog-header-meta span {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.blog-detail-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.blog-text p {
+    line-height: 1.8;
+    color: var(--gray-700);
+    margin-bottom: var(--space-lg);
+    font-size: 1.0625rem;
+}
+
+.blog-tags {
+    margin-top: var(--space-3xl);
+    padding-top: var(--space-xl);
+    border-top: 2px solid var(--gray-200);
+}
+
+.blog-tags h4 {
+    margin-bottom: var(--space-md);
+}
+
+.tags-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+}
+
+.tag {
+    background: var(--primary-light);
+    color: var(--primary);
+    padding: var(--space-xs) var(--space-md);
+    border-radius: var(--radius-full);
+    font-size: 0.875rem;
+    font-weight: 500;
+}
